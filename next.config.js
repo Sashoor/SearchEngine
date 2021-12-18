@@ -1,6 +1,7 @@
 module.exports = {
-  reactStrictMode: true, 
+  reactStrictMode: true,
+   
   images: {
-    domains: ['https://google.com/'],
+    domains: ["www.pngitem.com"],
   },
 }

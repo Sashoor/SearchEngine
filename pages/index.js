@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Avatar from "../components/Avatar";
-import { ViewGridIcon } from "@heroicons/react/solid";
+import { MicrophoneIcon, SearchCircleIcon, ViewGridIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/outline";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen">
       <Head>
         <title>Google</title>
 
@@ -33,17 +35,28 @@ export default function Home() {
       </header>
 
       {/* Body */}
-      <form>
+      <form className="flex flex-col items-center mt-44 flex-grow w-4/5">
         <Image
-          src={
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2w3W6imMRBY1VC3Cy0xcmlf-L0NzX60tsh5_PnhD1RJdKftgwTrYOiOPpCoe2WsbHjI8&usqp=CAU"
-          }
+          src=
+            "https://www.pngitem.com/pimgs/m/106-1063497_google-logo-png-transparent-background-google-png-logo.png"
+          alt="picture of google logo"
           width={300}
           height={100}
         />
+
+        <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full
+         borde border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
+          <SearchIcon className="h-5 mr-3 text-gray-500 "/>
+        <input type="text" className="focus:outline-none flex-grow"/>
+        <MicrophoneIcon className="h-5 " />
+        </div>
+        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
+          <button className="btn">Google Search</button>
+          <button className="btn">I'm feeling Lucky</button>
+        </div>
       </form>
 
-      {/* Footer */}
+      <Footer />
     </div>
   );
 }
