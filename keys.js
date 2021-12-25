@@ -1,7 +1,7 @@
 
 // https://developers.google.com/custom-search/v1/using_rest
 //API Key
-const API_KEY ="AIzaSyD4sbQoBg5g1bN39XmJRRlGbV1jLwNi_1E";
+export const API_KEY ="AIzaSyCFPUGaAl2TcsGVHXvsYqtZ_cLhepGLmeU";
 
 
 
